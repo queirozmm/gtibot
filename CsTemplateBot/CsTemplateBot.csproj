@@ -62,6 +62,9 @@
     <Reference Include="Polly, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Polly.5.4.0\lib\net45\Polly.dll</HintPath>
     </Reference>
+    <Reference Include="RestEase, Version=1.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestEase.1.4.4\lib\net45\RestEase.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleInjector, Version=4.0.8.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.0.8\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -80,6 +83,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -128,6 +132,7 @@
     <Compile Include="Decorators\MetricsNavigationExtension.cs" />
     <Compile Include="Extensions\BucketExtensions.cs" />
     <Compile Include="Extensions\ContactExtensions.cs" />
+    <Compile Include="Models\GitUser.cs" />
     <Compile Include="MySettings.cs" />
     <Compile Include="NoActionHandlers\CommandsNoActionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,8 +145,11 @@
     <Compile Include="Services\DocumentServices.cs" />
     <Compile Include="Services\EventTrackService.cs" />
     <Compile Include="Services\GenericErrorService.cs" />
+    <Compile Include="Services\GitService.cs" />
     <Compile Include="Services\IContextManager.cs" />
     <Compile Include="Services\IGenericErrorService.cs" />
+    <Compile Include="Services\IGitApi.cs" />
+    <Compile Include="Services\IGitService.cs" />
     <Compile Include="Services\IMediaService.cs" />
     <Compile Include="Services\IMpaService.cs" />
     <Compile Include="Services\INLPService.cs" />

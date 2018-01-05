@@ -39,6 +39,7 @@ namespace CsTemplateBot
                 typeof(CommandsNoActionHandler)
             });
 			RegisterSingleton<INLPService, NLPService>();
+            RegisterSingleton<IGitService, GitService>();
         }
 
         public void RegisterService(Type serviceType, Func<object> instanceFactory)
