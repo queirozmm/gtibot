@@ -78,7 +78,7 @@ namespace CsTemplateBot.NoActionHandlers
         private async Task GetUserAsync(string text, Node from, CancellationToken cancellationToken)
         {
             GitUser user = await _gitService.GetUser(text);
-            if (user.Name == null)
+            if (user != null)
             {
                 var contact = await _contactService.GetContactAsync(from, cancellationToken);
                 contact.Name = user.Name;
@@ -97,6 +97,10 @@ namespace CsTemplateBot.NoActionHandlers
 
                 await _sender.SendMessageAsync(d, from, cancellationToken);
                 await _mpaService.SendToMPAAsync(user.Name, from, cancellationToken, navParams); 
+            }
+            else
+            {
+                await _sender.SendMessageAsync("Não tem ninguém com esse usuário no git.", from, cancellationToken);
             }
         } 
 

@@ -13,16 +13,15 @@ namespace CsTemplateBot.Services
         public async Task<GitUser> GetUser(string username)
         {
             var client = RestClient.For<IGitApi>("https://api.github.com");
+            GitUser user = null;
             try
             {
-                GitUser user = await client.GetUserAsync(username);
-                return user;
+                await client.GetUserAsync(username);
             }
-            catch (System.Exception suaMae)
+            catch (ApiException)
             {
-                throw;
             }
-            return null;
+            return user;
         }
     }
 }
