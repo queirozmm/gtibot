@@ -1,0 +1,48 @@
+﻿{
+  "identifier": "templatecs",
+  "accessKey": "NHkxVVI5aXdZRDZsRTlFWEdaRnk=",
+  "channelCount": 8,
+  "messageReceivers": [
+    {
+      "type": "DefaultMessageReceiver",
+      "mediaType": "text/plain"
+    },
+    {
+      "type": "MediaReceiver",
+      "mediaType": "application/vnd.lime.media-link\\+json|application/vnd.lime.collection\\+json"
+    }
+  ],
+  "commandReceivers": [
+    {
+      "type": "AlertCommandReceiver",
+      "method": "get",
+      "uri": "/alert"
+    }
+  ],
+  "settings": {
+    "mpa": {
+      "WalletId": "c254fe54-04b4-45d2-956b-e3d921f0ab29",
+      "Uri": "http://app.mpa.take.io/engine/mpa/",
+      "WaitBetweenSends": "1200",
+      "SessionIdentifier": "314",
+      "RequestTimeoutSeconds": "30",
+      "TranslatorSettings": { "MessengerCarouselSkipUrlCheck": true }
+    },
+    "talkService": {
+      "Uri": "http://talkservice.blip.ai/api/analysis",
+      "Context": "",
+      "ConfidenceThreshold": "0.75",
+      "ConfidenceThresholdBound": "0.3",
+      "CacheExpirationInMinutes": "1440"
+    },
+    "metrics": {
+      "httpEndpointPort": 0,
+      "reportingConnectionString": "",
+      "reportingFrequencyInMinutes": 5
+    }
+  },
+  "settingsType": "MySettings",
+  "startupType": "Startup",
+  "serviceProviderType": "ServiceProvider",
+  "schemaVersion": 2
+}
